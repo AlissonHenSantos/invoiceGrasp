@@ -11,11 +11,11 @@ public class Invoice {
 	}
 	
 	public String buildInvoice() {
-		List<Item> itensVenda = venda.getItensVenda();
+		List<ItensVenda> itensVenda = venda.getItensVenda();
 		StringBuilder sb = new StringBuilder();
 		sb.append("Nome " + "Quantidade " +  "total   ").append(System.lineSeparator());
-		for (Item item : itensVenda) {
-			sb.append(item.getName() + "   " + item.getAmount() + "     " + item.calculatePrice()).append(System.lineSeparator());
+		for (ItensVenda item : itensVenda) {
+			sb.append(item.getItem().getName() + "   " + item.getQuantity() + "     " + item.getTotal()).append(System.lineSeparator());
 		}
 		
 		sb.append("TOTAL DA NOTA: " + venda.getTotal());

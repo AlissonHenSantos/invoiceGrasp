@@ -3,9 +3,9 @@ package view.console;
 import model.Invoice;
 import view.InvoiceBuilder;
 
-public class ConsoleInvoitePrinter extends InvoiceBuilder {
+public class ConsoleInvoicePrinter extends InvoiceBuilder {
 
-	public ConsoleInvoitePrinter(Invoice invoice) {
+	public ConsoleInvoicePrinter(Invoice invoice) {
 		super(invoice);
 	}
 	@Override

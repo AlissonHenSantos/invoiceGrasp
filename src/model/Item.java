@@ -4,16 +4,14 @@ public class Item {
 
 	private String name;
 	private Double price;
-	private Integer amount;
 	
 	public Item() {
 		
 	}
 	
-	public Item(String name, Double price, Integer amount) {
+	public Item(String name, Double price) {
 		this.name = name;
 		this.price = price;
-		this.amount = amount;
 	}
 
 	public String getName() {
@@ -30,23 +28,13 @@ public class Item {
 	}
 
 	
-	public Integer getAmount() {
-		return amount;
-	}
-
-	public void setAmount(Integer amount) {
-		this.amount = amount;
-	}
 
 	@Override
 	public String toString() {
-		return "Item [name=" + name + ", total = " + calculatePrice() + "]";
+		return "Item [name=" + name + ", preco = " + price + "]";
 	}
 	
-	public double calculatePrice() {
-		return amount * price;
-	}
-	
+
 	
 	
 }

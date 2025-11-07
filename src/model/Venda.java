@@ -5,19 +5,19 @@ import java.util.List;
 
 public class Venda {
 
-	private List<Item> itensVenda;
+	private List<ItensVenda> itensVenda;
 	private Double total;
 	public Venda() {
-		this.itensVenda = new ArrayList<Item>();
+		this.itensVenda = new ArrayList<ItensVenda>();
 		total = 0.0;
 	}
 	
-	public void addItem(Item item) {
-		total += item.calculatePrice();
+	public void addItem(ItensVenda item) {
+		total += item.getTotal();
 		itensVenda.add(item);
 	}
 	
-	public List<Item> getItensVenda(){
+	public List<ItensVenda> getItensVenda(){
 		return this.itensVenda;
 	}
 	
