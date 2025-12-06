@@ -1,8 +1,5 @@
 package model;
 
-
-public abstract class Payment {
-
-	
-  public abstract double calc(double value);
+public interface Payment {
+	double valueToBePaid(double value);
 }
