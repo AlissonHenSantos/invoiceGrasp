@@ -3,11 +3,13 @@ package model.data;
 import java.util.HashMap;
 import java.util.Map;
 
+import model.Estoque;
 import model.Item;
 import model.ItensVenda;
 import model.Venda;
 
 public class Mock {
+	 static Map<Item, Estoque> dbEstoque = new HashMap<>();
 
 	 static Map<Integer, Venda> dbVenda = new HashMap<Integer, Venda>();
 	 
@@ -15,6 +17,8 @@ public class Mock {
 		 Item item = new Item("Arroz", 10.50);
 		 Item item2 = new Item("feijao", 10.0);
 		 Item item3 = new Item("frango", 10.0);
+		 
+		 dbEstoque.put(item3, new Estoque(item3, 10));
 		 
 		 ItensVenda iv1 = new ItensVenda(item, 2);
 		 ItensVenda iv2 = new ItensVenda(item2, 1);
@@ -36,5 +40,8 @@ public class Mock {
 		 return dbVenda.get(id);
 	 }
 	 
+	 public static Estoque getEstoque(Item item) {
+		 return dbEstoque.get(item);
+	 }
 	 
 }
